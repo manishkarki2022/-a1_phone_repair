@@ -47,6 +47,15 @@
                         </p>
                     </a>
                 </li>
+                   <li
+                    class="nav-item {{ request()->route()->named('brands.index') || request()->route()->named('brands.index') ? 'menu-open' : '' }}">
+                        <a href="{{ route('brands.index') }}" class="nav-link">
+                        <i class="nav-icon fas fa-industry"></i>
+                        <p>
+                            Brands
+                        </p>
+                    </a>
+                </li>
                 {{-- <li
                     class="nav-item {{ request()->route()->named('tables.create') || request()->route()->named('tables.index') || request()->route()->named('tables.edit') ? 'menu-open' : '' }}">
                     <a href="#" class="nav-link">

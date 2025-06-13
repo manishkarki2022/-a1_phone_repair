@@ -19,7 +19,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('adminlte/plugins/sweetalert2/sweetalert2.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('adminlte/plugins/ekko-lightbox/ekko-lightbox.css') }}">
     <link rel="icon" type="image/png"
-        href="{{ websiteInfo() && websiteInfo()->first() && websiteInfo()->favicon ? asset('' . websiteInfo()->favicon) : asset('default/website.png') }}">
+        href="{{ websiteInfo() && websiteInfo()->first() && websiteInfo()->logo ? asset('' . websiteInfo()->logo) : asset('default/website.png') }}">
 
 
     <!-- Add dynamic theme color CSS -->

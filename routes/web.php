@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WebSettingController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\BrandController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -34,6 +35,10 @@ Route::middleware([
 
     Route::get('api/categories', [CategoryController::class, 'getCategories'])
          ->name('categories.api');
+
+
+         // Brands
+         Route::resource('brands', BrandController::class);
 
 
 });
