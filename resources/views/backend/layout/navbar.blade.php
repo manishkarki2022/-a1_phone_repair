@@ -10,25 +10,16 @@
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
-        <!-- Add Switch to Kitchen Dashboard Button (Visible Only to Admin) -->
-        @if (Auth::user()->role == 'admin')
-            <li class="nav-item">
-                <a href="" class="btn btn-primary mr-3">
-                      {{-- <a href="{{ route('kitchen-dashboard') }}" class="btn btn-primary mr-3"> --}}
-                    <i class="fas fa-utensils"></i> Go to Kitchen Dashboard
-                </a>
-            </li>
-        @endif
 
         <!-- Profile Dropdown -->
         <li class="nav-item dropdown">
             <a class="nav-link p-0 pr-3" data-toggle="dropdown" href="#">
-                <img src=""
-                    <img src="{{ websiteInfo()->first()->logo ? asset('default/admin.png' . websiteInfo()->first()->logo) : asset('default/admin.png') }}"
+                    <img src="{{ asset('default/avatar.png') }}"
                     class="img-circle elevation-2" width="40" height="40" alt="">
             </a>
 
             <div class="dropdown-menu dropdown-menu-right p-3">
+
                 <h4 class="h4 mb-0"><strong>{{ Auth::user()->name }}</strong></h4>
                 <div class="mb-3">{{ Auth::user()->email }}</div>
                 <div class="dropdown-divider"></div>
@@ -45,7 +36,7 @@
 
                 <!-- Logout Form -->
                 <form id="logout-form" action="" method="POST" style="display: none;">
-                      {{-- <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;"> --}}
+                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     @csrf
                 </form>
             </div>
